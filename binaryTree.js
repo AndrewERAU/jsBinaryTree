@@ -29,14 +29,12 @@ function BinaryTree() {
    this.root = null;
    this.outStr = "";
 
-
-
    this.printTraversals = function(startNode) {
-      this.outStr = "";
+      this.outStr = "Preorder: ";
       this.preorder(startNode);
-      this.outStr = "";
+      this.outStr = "Inorder: ";
       this.inorder(startNode);
-      this.outStr = "";
+      this.outStr = "Postorder: ";
       this.postorder(startNode);
    }
    this.insert = function() {
@@ -75,15 +73,25 @@ function BinaryTree() {
       this.preorder(node.rightChild);
 
       // show traversal string
-      document.getElementById("output").innerHTML = this.outStr;
+      document.getElementById("preorderOutput").innerHTML = this.outStr;
    }
    this.inorder = function(node) {
       if (node == null) return;
-      return;
+      this.inorder(node.leftChild);
+      this.visit(node);
+      this.inorder(node.rightChild);
+
+      // show traversal string
+      document.getElementById("inorderOutput").innerHTML = this.outStr;
    }
    this.postorder = function(node) {
       if (node == null) return;
-      return;
+      this.postorder(node.leftChild);
+      this.postorder(node.rightChild);
+      this.visit(node);
+
+      // show traversal string
+      document.getElementById("postorderOutput").innerHTML = this.outStr;
    }
 }
 
