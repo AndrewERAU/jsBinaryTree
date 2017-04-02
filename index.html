@@ -7,7 +7,11 @@ function myFunction(p1, p2) {
     var tmp = p1 * p2;              // The function returns the product of p1 and p2
     document.getElementById("output").innerHTML = tmp;
 }
-document.getElementById("output").innerHTML = x;
+function init() {
+   document.getElementById("output").innerHTML = x;
+}
+
+init();
 </script>
 
 
@@ -67,7 +71,7 @@ body {
    <button type="button", class="btn btn-danger width">Remove</button>
 </p>
 
-<p id="output">
+<p id="output" style="text-align:center;">
 </p>
 
 <!--
