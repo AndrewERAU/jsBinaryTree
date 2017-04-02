@@ -4,11 +4,11 @@ function myFunction() {
     document.getElementById("output").innerHTML = tmp;
 }
 
-// function init() {
-//    document.getElementById("output").innerHTML = x;
-// }
+function init() {
+   document.getElementById("output").innerHTML = x;
+}
 
-//window.onload = init;
+window.onload = init;
 
 
 /*function Apple (type) {
@@ -44,6 +44,7 @@ function BinaryTree() {
 }
 
 function test() {
+   document.getElementById("output").innerHTML = "yep";
    var tree = new BinaryTree();
    tree.root = new Node(5);
    tree.root.leftChild = new Node(2);
