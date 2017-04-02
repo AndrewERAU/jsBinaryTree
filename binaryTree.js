@@ -23,11 +23,11 @@ function Node (data) {
     this.data = data;
     this.leftChild = null;
     this.rightChild = null;
-    this.outStr = "";
 }
 
 function BinaryTree() {
    this.root = null;
+   this.outStr = "";
 
    this.visit = function(node) {
       this.outStr += " " + node.data;
