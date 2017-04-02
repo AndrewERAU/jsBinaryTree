@@ -1,6 +1,16 @@
 <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css"/> <!-- For bootstrap -->
 <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css"> <!-- For Lobster font -->
-<script src="binaryTree.js"></script>
+<!--<script src="binaryTree.js"></script>-->
+<script>
+var x = 1000
+function myFunction(p1, p2) {
+    var tmp = p1 * p2;              // The function returns the product of p1 and p2
+    document.getElementById("output").innerHTML = tmp;
+}
+document.getElementById("output").innerHTML = x;
+</script>
+
+
 <style>
 .input {
    padding: 10px;
@@ -57,8 +67,7 @@ body {
    <button type="button", class="btn btn-danger width">Remove</button>
 </p>
 
-<p>
-   <label id="output"></label>
+<p id="output">
 </p>
 
 <!--

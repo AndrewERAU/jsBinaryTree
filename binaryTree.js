@@ -6,4 +6,4 @@ function myFunction(p1, p2) {
 
 
 
-document.getElementById("output").value = x;
+document.getElementById("output").innerHTML = x;
