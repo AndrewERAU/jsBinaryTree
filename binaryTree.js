@@ -64,3 +64,5 @@ function BinaryTree() {
       if (node == null) return;
    }
 }
+
+var binaryTree = new BinaryTree();
