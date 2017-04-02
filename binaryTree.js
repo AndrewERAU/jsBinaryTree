@@ -32,8 +32,11 @@ function BinaryTree() {
 
 
    this.printTraversals = function(startNode) {
+      this.outStr = "";
       this.preorder(startNode);
+      this.outStr = "";
       this.inorder(startNode);
+      this.outStr = "";
       this.postorder(startNode);
    }
    this.insert = function() {
@@ -76,9 +79,11 @@ function BinaryTree() {
    }
    this.inorder = function(node) {
       if (node == null) return;
+      return;
    }
    this.postorder = function(node) {
       if (node == null) return;
+      return;
    }
 }
 
