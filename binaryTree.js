@@ -43,7 +43,7 @@ function BinaryTree() {
 
       if (this.root == null) this.root = nodeToInsert; // insert to empty tree
       else {
-         while (trvPtr.rightChild != nodeToInsert && trvPtr.leftChild != nodeToInsert {
+         while (trvPtr.rightChild != nodeToInsert && trvPtr.leftChild != nodeToInsert) {
             if (nodeToInsert.data >= trvPtr.data) {
                if (trvPtr.rightChild == null) {
                   trvPtr.rightChild = nodeToInsert;
@@ -71,7 +71,7 @@ function BinaryTree() {
       this.preorder(node.leftChild);
       this.preorder(node.rightChild);
 
-      // show traveral string
+      // show traversal string
       document.getElementById("output").innerHTML = this.outStr;
    }
    this.inorder = function(node) {
