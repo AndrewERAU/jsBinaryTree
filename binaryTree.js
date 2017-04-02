@@ -63,6 +63,25 @@ function BinaryTree() {
       this.printTraversals(this.root);
    }
 
+   this.search = function() {
+      dataToLookFor = parseInt(document.getElementById("userNum").value);
+      trvPtr = this.root;
+
+      while (trvPtr != null && trvPtr.data != dataToLookFor) {
+         if (dataToLookFor > trvPtr.data) {
+            trvPtr = trvPtr.rightChild;
+         } else if (dataToLookFor < trvPtr.data) {
+            trvPtr = trvPtr.leftChild;
+         }
+      }
+
+      if (trvPtr == null) {
+         document.getElementById("status").innerHTML = dataToLookFor + " not found.";
+      } else { // trvPtr.data == dataToLookFor
+         document.getElementById("status").innerHTML = dataToLookFor + " found!"; 
+      }
+   }
+
    this.visit = function(node) {
       this.outStr += " " + node.data;
    }

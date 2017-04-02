@@ -78,15 +78,16 @@ body {
    <div class="container">
       <h1 class="center title">Welcome to the Javascript Binary Tree</h1>
       <p class="input center">
-         <input id="userNum" type="number", placeholder="72">
+         <input id="userNum" type="number" placeholder="72">
       </p>
 
       <p style="text-align:center;">
-         <button type="button", onclick="binaryTree.insert()" class="btn btn-success width">Insert</button>
-         <button type="button", class="btn btn-primary width">Search</button>
-         <button type="button", class="btn btn-danger width">Remove</button>
+         <button type="button" onclick="binaryTree.insert()" class="btn btn-success width">Insert</button>
+         <button type="button" onclick="binaryTree.search()" class="btn btn-primary width">Search</button>
+         <button type="button" class="btn btn-danger width">Remove</button>
       </p>
 
+      <p id="status" style="text-align:center;">&nbsp;</p>
       <p id="preorderOutput" style="text-align:center;">Preorder:</p>
       <p id="inorderOutput" style="text-align:center;">Inorder:</p>
       <p id="postorderOutput" style="text-align:center;">Postorder</p>
