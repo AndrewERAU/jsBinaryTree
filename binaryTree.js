@@ -33,6 +33,7 @@ function BinaryTree() {
       this.outStr += " " + node.data;
    }
    this.preorder = function (node) {
+      if (node == null) return;
       this.visit(node);
       this.preorder(node.leftChild);
       this.preorder(node.rightChild);
@@ -41,7 +42,6 @@ function BinaryTree() {
       document.getElementById("output").innerHTML = this.outStr;
       document.getElementById("output").innerHTML = " my test str ";
    }
-   document.getElementById("output").innerHTML = "tree";
 }
 
 function test() {
