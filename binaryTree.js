@@ -1,9 +1,10 @@
-var x = 1000
-function myFunction(p1, p2) {
-    var tmp = p1 * p2;              // The function returns the product of p1 and p2
+var x = 2000
+function myFunction() {
+    var tmp = document.getElementById("userNum").value * document.getElementById("userNum").value;
     document.getElementById("output").innerHTML = tmp;
 }
+function init() {
+   document.getElementById("output").innerHTML = x;
+}
 
-
-
-document.getElementById("output").innerHTML = x;
+window.onload = init;
