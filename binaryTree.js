@@ -41,10 +41,10 @@ function BinaryTree() {
       document.getElementById("output").innerHTML = this.outStr;
       document.getElementById("output").innerHTML = " my test str ";
    }
+   document.getElementById("output").innerHTML = "tree";
 }
 
 function test() {
-   document.getElementById("output").innerHTML = "yep";
    var tree = new BinaryTree();
    tree.root = new Node(5);
    tree.root.leftChild = new Node(2);
