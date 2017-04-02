@@ -40,7 +40,6 @@ function BinaryTree() {
 
       // show traveral string
       document.getElementById("output").innerHTML = this.outStr;
-      document.getElementById("output").innerHTML = " my test str ";
    }
 }
 
