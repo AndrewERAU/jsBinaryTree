@@ -46,7 +46,7 @@ function BinaryTree() {
          while (trvPtr.rightChild != nodeToInsert && trvPtr.leftChild != nodeToInsert {
             if (nodeToInsert.data >= trvPtr.data) {
                if (trvPtr.rightChild == null) {
-                  trvPtr.rightChild = nodeToInsert
+                  trvPtr.rightChild = nodeToInsert;
                } else {
                   trvPtr = trvPtr.rightChild;
                }
