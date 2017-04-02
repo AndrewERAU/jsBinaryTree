@@ -38,7 +38,7 @@ function BinaryTree() {
       this.postorder(startNode);
    }
    this.insert = function() {
-      var data = document.getElementById("userNum").value;
+      var data = parseInt(document.getElementById("userNum").value);
       var nodeToInsert = new Node(data);
       var trvPtr = this.root;
 

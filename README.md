@@ -1,4 +1,4 @@
-# jsBinaryTree
+# jsBinaryTree - JavaScript Binary Tree
 
 This repository is a GitHub-Pages site hosted here: https://andrewerau.github.io/jsBinaryTree/
 
