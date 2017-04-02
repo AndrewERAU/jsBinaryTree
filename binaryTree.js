@@ -19,7 +19,7 @@ window.onload = init;
     };
 }*/
 // Start
-function Node (data) {
+function Node(data) {
     this.data = data;
     this.leftChild = null;
     this.rightChild = null;
@@ -29,10 +29,26 @@ function BinaryTree() {
    this.root = null;
    this.outStr = "";
 
+
+
+   this.printTraversals = function(startNode) {
+      this.preorder(startNode);
+      this.inorder(startNode);
+      this.postorder(startNode);
+   }
+   this.insert = function(data) {
+      var nodeToInsert = new Node(data);
+
+      if (this.root == null) this.root = nodeToInsert;
+
+
+      this.printTraversals(this.root);
+   }
+
    this.visit = function(node) {
       this.outStr += " " + node.data;
    }
-   this.preorder = function (node) {
+   this.preorder = function(node) {
       if (node == null) return;
       this.visit(node);
       this.preorder(node.leftChild);
@@ -41,12 +57,10 @@ function BinaryTree() {
       // show traveral string
       document.getElementById("output").innerHTML = this.outStr;
    }
-}
-
-function test() {
-   var tree = new BinaryTree();
-   tree.root = new Node(5);
-   tree.root.leftChild = new Node(2);
-   tree.root.rightChild = new Node(102);
-   tree.preorder(tree.root);
+   this.inorder = function(node) {
+      if (node == null) return;
+   }
+   this.postorder = function(node) {
+      if (node == null) return;
+   }
 }
