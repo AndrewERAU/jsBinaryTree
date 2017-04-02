@@ -60,6 +60,7 @@ function BinaryTree() {
             }
          }
       }
+      document.getElementById("status").innerHTML = data + " inserted!";
       this.printTraversals(this.root);
    }
 
@@ -78,7 +79,7 @@ function BinaryTree() {
       if (trvPtr == null) {
          document.getElementById("status").innerHTML = dataToLookFor + " not found.";
       } else { // trvPtr.data == dataToLookFor
-         document.getElementById("status").innerHTML = dataToLookFor + " found!"; 
+         document.getElementById("status").innerHTML = dataToLookFor + " found!";
       }
    }
 
