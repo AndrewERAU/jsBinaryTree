@@ -39,10 +39,26 @@ function BinaryTree() {
    this.insert = function() {
       data = document.getElementById("userNum").value;
       var nodeToInsert = new Node(data);
+      var trvPtr = this.root;
 
-      if (this.root == null) this.root = nodeToInsert;
-
-
+      if (this.root == null) this.root = nodeToInsert; // insert to empty tree
+      else {
+         while (trvPtr.rightChild != nodeToInsert && trvPtr.leftChild != nodeToInsert {
+            if (nodeToInsert.data >= trvPtr.data) {
+               if (trvPtr.rightChild == null) {
+                  trvPtr.rightChild = nodeToInsert
+               } else {
+                  trvPtr = trvPtr.rightChild;
+               }
+            } else { // nodeToInsert.data > trvPtr.data
+               if (trvPtr.leftChild == null) {
+                  trvPtr.leftChild = nodeToInsert;
+               } else {
+                  trvPtr = trvPtr.leftChild;
+               }
+            }
+         }
+      }
       this.printTraversals(this.root);
    }
 
