@@ -4,4 +4,4 @@ This repository is a GitHub-Pages site hosted here: https://andrewerau.github.io
 
 -- 3RD-PARTY-LICENSE INFO -------------------------------------------------------------------------------------
 
-This software uses third party libraries that are distributed under their own terms (see LICENSE-3RD-PARTY.txt)
+This software uses third party libraries that are distributed under their own terms (see LICENSE-3RD-PARTY.md)

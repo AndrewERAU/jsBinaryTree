@@ -83,8 +83,8 @@ body {
 
       <p style="text-align:center;">
          <button type="button" onclick="binaryTree.insert()" class="btn btn-success width">Insert</button>
-         <button type="button" onclick="binaryTree.search()" class="btn btn-primary width">Search</button>
-         <button type="button" class="btn btn-danger width">Remove</button>
+         <button type="button" onclick="binaryTree.search(binaryTree.root,null)" class="btn btn-primary width">Search</button>
+         <button type="button" onclick="binaryTree.remove(binaryTree.root,null)" class="btn btn-danger width">Remove</button>
       </p>
 
       <p id="status" style="text-align:center;">&nbsp;</p>
