@@ -16,3 +16,9 @@ body {
 .width {
    width: 100px !important;
 }
+
+input[type='text'],
+input[type='number'],
+textarea {
+  font-size: 16px;
+}
