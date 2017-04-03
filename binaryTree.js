@@ -28,6 +28,8 @@ function Node(data) {
 function BinaryTree() {
    this.root = null;
    this.outStr = "";
+   this.startTime = null; // used to time each insert/search/remove
+   this.endTime = null; // used to time each insert/search/remove
 
    this.printTraversals = function(startNode) {
       this.outStr = "Preorder: ";
@@ -37,7 +39,27 @@ function BinaryTree() {
       this.outStr = "Postorder: ";
       this.postorder(startNode);
    }
+
+   this.showTime = function() {
+      document.getElementById("status").innerHTML += " - " + (this.endTime-this.startTime).toFixed(2) + "ms";
+   }
+
+   this.setStartTime = function() {
+      //var d = new Date();
+      //var n = d.getTime();
+      //this.startTime = n;
+      this.startTime = window.performance.now();
+   }
+
+   this.setEndTime = function() {
+      //var d = new Date();
+      //var n = d.getTime();
+      //this.endTime = n;
+      this.endTime = window.performance.now();
+   }
+
    this.insert = function() {
+      this.setStartTime();
       var data = parseInt(document.getElementById("userNum").value);
       var nodeToInsert = new Node(data);
       var trvPtr = this.root;
@@ -60,11 +82,14 @@ function BinaryTree() {
             }
          }
       }
+      this.setEndTime();
       document.getElementById("status").innerHTML = data + " inserted!";
+      this.showTime();
       this.printTraversals(this.root);
    }
 
    this.search = function(startNode,parentOfStartNode,dataToLookFor) { // dataToLookFor is optional
+      this.setStartTime();
       if(typeof dataToLookFor === "undefined") {
          dataToLookFor = parseInt(document.getElementById("userNum").value);
       }
@@ -80,16 +105,20 @@ function BinaryTree() {
          }
       }
 
+      this.setEndTime();
       if (trvPtr == null) {
          document.getElementById("status").innerHTML = dataToLookFor + " not found.";
+         this.showTime();
          return [null,null];
       } else { // trvPtr.data == dataToLookFor
          document.getElementById("status").innerHTML = dataToLookFor + " found!";
+         this.showTime();
          return [trvPtr,parentPtr];
       }
    }
 
    this.remove = function(startNode, parentOfStartNode, dataToRemove) { // dataToRemove is optional
+      this.setStartTime();
       if (typeof dataToRemove === "undefined") {
          dataToRemove = parseInt(document.getElementById("userNum").value);
       }
@@ -98,7 +127,9 @@ function BinaryTree() {
       var parentOfNodeToRemove = nodes[1];
 
       if (nodeToRemove == null) {
+         this.setEndTime();
          document.getElementById("status").innerHTML = dataToRemove + " not removed (not found in tree)";
+         this.showTime();
          return null;
       } else if (nodeToRemove.leftChild == null && nodeToRemove.rightChild == null) {
          // both children equal null. easy. simply remove node
@@ -150,7 +181,9 @@ function BinaryTree() {
          this.remove(nodeToRemove.rightChild,nodeToRemove,nodeToRemove.data);
       }
 
+      this.setEndTime();
       document.getElementById("status").innerHTML = dataToRemove + " removed!";
+      this.showTime();
       this.printTraversals(this.root);
    }
 
