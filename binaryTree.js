@@ -129,7 +129,7 @@ function BinaryTree() {
             }
          }
       }
-      if (typeof data === "undefined") {
+      if (typeof valueToInsert === "undefined") {
          this.setEndTime();
          document.getElementById("status").innerHTML = data + " inserted!";
          this.showTime();
