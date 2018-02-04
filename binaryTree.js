@@ -1,24 +1,3 @@
-var x = 2000
-function myFunction() {
-    var tmp = document.getElementById("userNum").value * document.getElementById("userNum").value;
-    document.getElementById("output").innerHTML = tmp;
-}
-
-function init() {
-   document.getElementById("output").innerHTML = x;
-}
-
-window.onload = init;
-
-
-/*function Apple (type) {
-    this.type = type;
-    this.color = "red";
-    this.getInfo = function() {
-        return this.color + ' ' + this.type + ' apple';
-    };
-}*/
-// Start
 function Node(data) {
     this.data = data;
     this.leftChild = null;
