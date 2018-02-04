@@ -1,72 +1,11 @@
-
-
-<!-- <script>
-var x = 2000
-function myFunction() {
-    var tmp = document.getElementById("userNum").value * document.getElementById("userNum").value;
-    document.getElementById("output").innerHTML = tmp;
-}
-function init() {
-   document.getElementById("output").innerHTML = x;
-}
-
-window.onload = init;
-</script> -->
-
-<!--
-<style>
-.input {
-   padding: 10px;
-}
-.center {
-   text-align: center;
-}
-
-.title {
-   font-family: Lato, Monospace;
-}
-
-body {
-   background-color:  #e0e0d1;
-}
-
-.width {
-   width: 100px !important;
-}
-
-
-</style> -->
-<!--
-<form>
-   <div class="row input center">
-      <input type="text" placeholder="ex) 56">
-   </div>
-   <div class="row">
-      <div class="col-xs-4">
-      </div>
-      <div class="col-xs-6">
-         <button class="btn btn-success width">Insert</button>
-         <button class="btn btn-primary width">Search</button>
-         <button class="btn btn-danger width">Remove</button>
-      </div>
-      <div class="col-xs-5">
-      </div>
-   </div>
-
-
-</form>
--->
-
-
 <head>
-   <title></title>
+   <title>JS Binary Tree</title>
    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
    <!-- For bootstrap -->
    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css"/>
    <!-- For Lato font -->
    <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css">
    <link rel="stylesheet" type="text/css" href="main.css">
-
 </head>
 
 <body>
@@ -93,29 +32,3 @@ body {
       <p id="postorderOutput" style="text-align:center;">Postorder</p>
    </div>
 </body>
-<!--
-<%= form_for :binarytree, url: binarytrees_path do |f| %>
-  <p class="input center">
-    <%= f.text_field :title,type: "number", placeholder: "72"%>
-  </p>
-  <p style="text-align:center;">
-    <%= f.submit "Insert", class: "btn btn-success width"%>
-    <%= f.submit "Search", class: "btn btn-primary width"%>
-    <%= f.submit "Remove", class: "btn btn-danger width"%>
-  </p>
-  <p style="text-align:center; padding: 20px;">
-     prints status without dereferencing null object
-     <%= f.label (($binaryTree && $binaryTree.status) || "") %>
-  </p>
-  <p style="text-align:center; padding: 5px;">
-      prints traversal without dereferencing null object
-     <%= f.label "Preorder: " + (($binaryTree && $binaryTree.preOrderTraversal($binaryTree.head)) || "") %>
-  </p>
-  <p style="text-align:center;">
-     prints traversal without dereferencing null object
-     <%= f.label "Inorder: " + (($binaryTree && $binaryTree.inOrderTraversal($binaryTree.head)) || "") %>
-  </p>
-  </div>
-</body>
-
-<% end %>-->
